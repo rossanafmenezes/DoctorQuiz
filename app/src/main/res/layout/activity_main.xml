@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="16dp">
+
+        <TextView
+            style="@style/App_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="The Doctor's Quiz"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="16dp"
+            />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logo"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+
+            />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp"
+         >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1 - Which Actor played the 10th Doctor?"
+            />
+
+        <EditText
+            android:id="@+id/doctorName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Answer Here"/>
+
+    </LinearLayout>
+
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="16dp"
+         android:orientation="vertical">
+
+         <TextView
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="2 - Which Doctor has the line “900 years of time and space, and I’ve never been slapped by someone’s mother.”" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radioEighth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="8th Doctor"/>
+                <RadioButton
+                    android:id="@+id/radioNinth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9th Doctor"/>
+                <RadioButton
+                    android:id="@+id/radioTenth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10th Doctor"/>
+                <RadioButton
+                    android:id="@+id/radioEleventh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11th Doctor"/>
+
+
+            </RadioGroup>
+
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="16dp"
+          android:orientation="vertical">
+
+          <TextView
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="3 - The home Planet of the Doctor is called Gallifrey. " />
+
+          <RadioGroup
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+
+              <RadioButton
+                  android:id="@+id/radioTrue"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="True" />
+
+              <RadioButton
+                  android:id="@+id/radioFalse"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="False" />
+
+
+          </RadioGroup>
+
+      </LinearLayout>
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginBottom="16dp"
+           android:orientation="vertical">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="4 - What were the last words spoken by the Tenth Doctor before he regenerated??" />
+
+           <EditText
+               android:id="@+id/lastWordsAnswer"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="Answer Here" />
+
+
+
+       </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5 - Select all that have been a Companion to the Doctor:" />
+
+
+            <CheckBox
+                android:id="@+id/roseCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rose"/>
+
+            <CheckBox
+                android:id="@+id/abbyCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Abby"/>
+
+            <CheckBox
+                android:id="@+id/marthaCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Martha"/>
+
+            <CheckBox
+                android:id="@+id/clairCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clair"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:orientation="vertical"
+            >
+
+            <Button
+                android:id="@+id/buttonSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Submit"
+                android:onClick="submitAnswers"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <TextView
+                android:id="@+id/textScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:textColor="#1A237E"
+                android:layout_marginTop="16sp"
+                android:layout_gravity="center_horizontal"
+
+
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>
